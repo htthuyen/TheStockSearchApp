@@ -40,11 +40,11 @@ The Stock Search App allows users to search for a stock by its ticker symbol and
 
 ### 2. Screen Archetypes
 
-- Search Screen
+- [x] Search Screen
 * User can search a stock by enter ticker symbol to a search bar
 * User can get a notification when invalid ticker symbol or not found
 
-- Stock Details Screen
+- [x] Stock Details Screen
 * User can view stock information such as current price, low, high, etc
 
 
@@ -58,18 +58,18 @@ The Stock Search App allows users to search for a stock by its ticker symbol and
 
 **Flow Navigation** (Screen to Screen)
 
-- Search Screen
+- [x] Search Screen
 => Stock Details Screen
 
-- Stock Details Screen
+- [x] Stock Details Screen
 => Search Screen
 
 
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img width="600" height="3024" alt="image" src="https://github.com/user-attachments/assets/1c4b0cdd-5f03-4229-b968-482c4ea763b4" />
+
 
 ## Schema
 
