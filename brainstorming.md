@@ -15,10 +15,9 @@ Mobile App Dev - App Brainstorming
 1. Cat Breed Info App
    - Allow users enter a cat breet name and view details such as lifespan, diet, personality traits, and more.
 
-## Top 3 New App Ideas
+## Top 2 New App Ideas
 1. Stock Search App
-2. Currency Converter
-3. Cat Breed Info App
+2. Cat Breed Info App
 
 ## New App Ideas - Evaluate and Categorize
 1. Stock Search App
