@@ -71,3 +71,14 @@ The Stock Search App allows users to search for a stock by its ticker symbol and
 [Add picture of your hand sketched wireframes in this section]
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
+## Schema
+
+<div>
+    <a href="https://www.loom.com/share/fb14c80ea05a41289b714d15268e2d2c">
+    </a>
+    <a href="https://www.loom.com/share/fb14c80ea05a41289b714d15268e2d2c">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/fb14c80ea05a41289b714d15268e2d2c-9fa30efe1f4eb5f7-full-play.gif">
+    </a>
+  </div>
+
+
