@@ -30,13 +30,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
     
     func fetchStockData(for symbol: String) {
-        let apiKey = "XBDvA814Zn3w8qn9rnKTyg==4av03H2GYHB0pnBa"
         let urlString = "https://api.api-ninjas.com/v1/stockprice?ticker=\(symbol)"
-        
         guard let url = URL(string: urlString) else { return }
 
         var request = URLRequest(url: url)
-        request.setValue(apiKey, forHTTPHeaderField: "X-Api-Key")
+        request.setValue(Secrets.apiKey, forHTTPHeaderField: "X-Api-Key")
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
@@ -51,7 +49,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
             do {
                 if let stockJSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    
                     let fetchedStock = Stock(
                         ticker: stockJSON["ticker"] as? String ?? symbol.uppercased(),
                         name: stockJSON["name"] as? String ?? "N/A",
@@ -59,25 +56,20 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
                         exchange: stockJSON["exchange"] as? String ?? "N/A",
                         currency: stockJSON["currency"] as? String ?? "USD"
                     )
-
                     DispatchQueue.main.async {
                         self.selectedStock = fetchedStock
                         self.performSegue(withIdentifier: "showDetails", sender: self)
                     }
-
                 } else {
                     print("Stock not found")
                     DispatchQueue.main.async {
                         self.showAlert(title: "Not Found", message: "No stock found for \(symbol)")
                     }
                 }
-
             } catch {
                 print("JSON Error: \(error)")
             }
-
         }
-
         task.resume()
     }
 

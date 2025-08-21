@@ -14,6 +14,24 @@
 
 The Stock Search App allows users to search for a stock by its ticker symbol and instantly view real-time market data, including company name, price, exchange, and currency
 
+## API Key Setup
+
+This app requires an API key for stock data. **Do not commit your API key to the repository.**
+
+1. Create a file named `Secrets.swift` in the `StockSearchApp` directory:
+  ```swift
+  struct Secrets {
+    static let apiKey = "YOUR_API_KEY_HERE"
+  }
+  ```
+2. Replace `YOUR_API_KEY_HERE` with your actual API key.
+3. Make sure `Secrets.swift` is listed in `.gitignore` so it is not tracked by git.
+4. If you accidentally commit your API key, revoke it immediately and generate a new one.
+
+## Contributing
+
+If you fork or clone this repository, you must provide your own API key in `Secrets.swift` as described above. The app will not work without a valid key.
+
 ### App Evaluation
    - **Category:** Finance
    - **Mobile:** Provides fast, on-the-go access to real-time stock data. The app is designed for mobile-first interactions — optimized for quick lookup with minimal input. Potential to integrate notifications for price alerts or voice input for ticker search to enhance mobile-native features.
